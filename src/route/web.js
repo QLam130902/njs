@@ -7,9 +7,15 @@ let initWebRoutes=(app)=> {
     router.get('/', homeController.getHomePage);
     
     router.get('/about',homeController.getAboutMe);
+    
+    router.get('/crud',homeController.getCRUD);
+
+    router.post('/post-crud', homeController.postCRUD);
+
+    router.get('/get-crud', homeController.displayGetCRUD);
 
     router.get('/love',(req, res)=>{
-        return res.send('Quang Lâm yêu Tường Vie quãiiii')
+        return res.send('Quang Lâm yêu Tường Vie quãiiii');
     });
     return app.use("/", router);
     
