@@ -14,6 +14,10 @@ let initWebRoutes=(app)=> {
 
     router.get('/get-crud', homeController.displayGetCRUD);
 
+    router.get('/edit-crud', homeController.getEditCRUD);
+
+    router.post('/put-crud', homeController.putCRUD);
+
     router.get('/love',(req, res)=>{
         return res.send('Quang Lâm yêu Tường Vie quãiiii');
     });
